@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-$rem-base: 12px;
+$rem-base: 16px;
 $line-height-base: 1.5;
 $type-rhythm-ratio: 1.14;
 $desktop: "(min-width: 1024px)";
@@ -34,11 +34,11 @@ $dark-gray: #444;
 @include type;
 
 @include breakpoint($mobile) {
-  @include type(10);
+  @include type(14);
 }
 
 @include breakpoint($landscape){
-  @include type(10);
+  @include type(14);
   span.scroll-indicator {
     font-size: 10px !important;
   }
@@ -48,7 +48,7 @@ html, body {
   height: 100%;
   overflow: hidden;
   @include prefixer(perspective, 200);
-  background: black;
+  background: $light-gray;
 }
 
 body {
@@ -75,7 +75,7 @@ section {
     right: 0;
     width: 100%;
     height: 100%;
-    padding: 0px 20px;
+    padding: 1em 20px;
     background-size: 100% 100%;
     @include breakpoint($desktop) {
         width: 63.54vh;
@@ -126,6 +126,12 @@ section {
   &.left {
     @include prefixer(transform, translate3d(100%,0,0));
   }
+  &.cube {
+    @include prefixer(transform, translate3d(0,50%,0) rotateX(-90deg));
+  }
+  &.cube_after.after {
+    @include prefixer(transform, translate3d(0,-50%,0) rotateX(90deg));
+  }
   &.shrink { 
     @include prefixer(transform, scale(0));
   }
@@ -133,7 +139,7 @@ section {
     @include prefixer(transform, scale(0));
   }
   &.roll{
-    @include prefixer(transform, translate3d(100%,0,0) rotatez(-180deg));
+    @include prefixer(transform, translate3d(100%,0,0) rotateZ(-180deg));
   }
   &.roll_after.after {
     @include prefixer(transform, translate3d(-100%,0,0) rotateZ(180deg));
@@ -147,17 +153,16 @@ section {
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: 20%;
+    top: 30%;
     width: 100%;
     max-height: 70%;
     padding: 0 20px;
-    @include prefixer(transform, scale(0));
-    &.active{
-      @include prefixer(transform, scale(1));
-    }
   }
-  @include prefixer(transition, all .35s ease-out);
-  background: $blue;
+  @include prefixer(transition, all .55s ease-out);
+  @include prefixer(perspective, 1000px);
+  background: white;
+  color: $teal;
+  text-align: center;
   div.container {
     position: relative;
     text-align: center;
@@ -165,12 +170,15 @@ section {
     @include prefixer(transform, translateY(-50%));
   }
   h1 {
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    color: $dark-gray;
+    padding: 1em 0;
+  }
+  p {
+    color: $teal;
+    padding: 0.5em;
   }
   a{
     text-decoration: underline;
-    color: white;
+    color: $teal;
   }
 }
