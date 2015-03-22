@@ -1,6 +1,4 @@
-@font-face {
-  font-weight: normal;
-  font-style: normal; }
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,7 +47,7 @@ table {
   box-sizing: border-box; }
 
 body {
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 h1 {
   font-size: 35px;
@@ -81,7 +79,7 @@ p {
 
 @media (max-width: 767px) {
   body {
-    line-height: 1.5; }
+    line-height: 1.8; }
 
   h1 {
     font-size: 31px;
@@ -112,7 +110,7 @@ p {
     font-size: 0.875rem; } }
 @media (max-width: 767px) and (orientation: landscape) {
   body {
-    line-height: 1.5; }
+    line-height: 1.8; }
 
   h1 {
     font-size: 31px;
@@ -153,7 +151,7 @@ html, body {
   background: #DFDFE3; }
 
 body {
-  font-family: 'open_sansbold',san-serif; }
+  font-family: Georgia, "Times New Roman", "Hiragino Sans GB", "冬青黑体", SimHei, "黑体", arial; }
 
 main {
   display: block;
@@ -336,11 +334,10 @@ section {
     -moz-transform: translateY(-50%);
     transform: translateY(-50%); }
   section h1 {
-    color: #444;
-    padding: 1em 0; }
+    color: #444; }
   section p {
     color: #1abc9c;
-    padding: 0.5em; }
+    padding: 0.2em; }
   section a {
     text-decoration: underline;
     color: #1abc9c; }

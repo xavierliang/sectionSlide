@@ -1,12 +1,7 @@
 @import "guff";
 
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-}
-
 $rem-base: 16px;
-$line-height-base: 1.5;
+$line-height-base: 1.8;
 $type-rhythm-ratio: 1.14;
 $desktop: "(min-width: 1024px)";
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
@@ -52,7 +47,7 @@ html, body {
 }
 
 body {
-  font-family: 'open_sansbold',san-serif;
+  font-family: Georgia, "Times New Roman", "Hiragino Sans GB", "冬青黑体", SimHei, "黑体", arial;
 }
 
 main {
@@ -171,11 +166,10 @@ section {
   }
   h1 {
     color: $dark-gray;
-    padding: 1em 0;
   }
   p {
     color: $teal;
-    padding: 0.5em;
+    padding: 0.2em;
   }
   a{
     text-decoration: underline;
