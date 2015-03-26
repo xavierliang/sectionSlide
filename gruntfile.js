@@ -37,6 +37,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        haml:{
+            dist: {
+                files: {
+                    "test.html": "test.haml"
+                }
+            }
+        },
         connect: {
             server: {
                 options: {
@@ -58,9 +65,13 @@ module.exports = function(grunt) {
             css: {
                 files: 'css/*.css',
                 tasks: ['autoprefixer']
+            },
+            haml: {
+                files: '*.haml',
+                tasks: ['haml']
             }
         }
     });
-    grunt.registerTask('default', ['jshint', 'uglify', 'compass', 'autoprefixer']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'compass', 'autoprefixer', 'haml']);
     grunt.registerTask('dev', ['connect', 'watch']);
 };

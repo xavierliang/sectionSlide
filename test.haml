@@ -10,14 +10,29 @@
     %script{src:"js/modernizr.min.js"}
   %body
     .main
-      %section.scene.fix.up_after
-        %h1 优热点鹿由器
-      %section.scene.up.up_after
-        %h1.title 拉近您与顾客的距离
+      %section.scene.fix.up_after.white
+        .logo
+          %img(src="img/logo.png")
+        .products
+          %img(src="img/products.png")
+        .bottom-orange
+      %section.scene.up.up_after.orange
+        %h3.title 拉近您与顾客的距离
         %section.slide.fix.fade.cube_after
-          %h5 我怕老顾客对我不满意
-          %h5 老顾客的重要性
-          %p 得罪一个老顾客，将多付出5-7倍成本
+          .sub_title
+            %h6 您已使出浑身解数关注老顾客？
+          .piece
+            .f_left.icon
+              %img(src="img/people.png")
+            .f_left.middle_p
+              %h6 记住老顾客的脸！
+            .clear
+          .piece
+            .f_left.icon
+              %img(src="img/card.png")
+            .f_left.middle_p
+              %h6 很多的会员卡……
+            .clear
         %section.slide.fade.cube.cube_after
           %h5 用各种方法关照老顾客
           %p 刷脸
@@ -27,7 +42,7 @@
           %p 自动发现老顾客
           %p 主动送上一份温情
       %section.scene.up.up_after
-        %h1 优化您的营销方式
+        %h3 优化您的营销方式
         %section.slide.fade.fix.cube_after
           %h5 每当推出新产品，既期待，又烦恼
           %p 要做KT板、DM单
