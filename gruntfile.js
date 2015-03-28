@@ -28,8 +28,8 @@ module.exports = function(grunt) {
             target: {
                 files: {
                     'js/sectionSlide.min.js': [
-                        'js/jquery-1.11.0.min.js',
-                        'js/jquery-migrate-1.2.1.min.js',
+                    //    'js/jquery-1.11.0.min.js',
+                    //    'js/jquery-migrate-1.2.1.min.js',
                         'js/touchswipe.js',
                         'js/browserSwipe.js',
                         'js/sectionSlide.js'
