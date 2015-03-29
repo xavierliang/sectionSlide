@@ -5,9 +5,9 @@
     %meta{charset:"utf-8"}/
     %meta{name:"viewport", content:"width=device-width, initial-scale=1.0, user-scalable=no"}/
     %meta{name:"Description", content:" test for sectionSlide"}/
-    %title sectionSlide
+    %title 优热点，助力您的生意
     %link{rel:"stylesheet", href:"css/screen.css"}
-    %script{src:"js/modernizr.min.js"}
+    %script{src:"js/jquery-1.11.0.min.js"}
   %body
     .main
       %section.scene.fix.up_after.white
@@ -16,40 +16,102 @@
         .products
           %img(src="img/products.png")
         .bottom-orange
+        %span.scroll-indicator V
       %section.scene.up.up_after.orange
         %h3.title 拉近您与顾客的距离
         %section.slide.fix.fade.cube_after
           .sub_title
             %h6 您已使出浑身解数关注老顾客？
-          .piece
+          .piece.bounceIn.fragment(data-auto="800")
             .f_left.icon
               %img(src="img/people.png")
-            .f_left.middle_p
+            .f_left.t_5
               %h6 记住老顾客的脸！
             .clear
-          .piece
+          .piece.bounceIn.fragment(data-auto="800")
             .f_left.icon
               %img(src="img/card.png")
-            .f_left.middle_p
+            .f_left.t_5
               %h6 很多的会员卡……
             .clear
         %section.slide.fade.cube.cube_after
-          %h5 用各种方法关照老顾客
-          %p 刷脸
-          %p 会员卡
+          .sub_title
+            %h6 优热点帮您轻松识别老顾客
+          .a_left.phone_frame.roll.fragment(data-auto="500" data-exempt="5")
+            %img(src="img/phone.png")
+          .piece
+            .phone_inside.a_left
+              .w_50.t_15.bounceIn.fragment(data-auto="800")
+                %img(src="img/online_t.png")
+              .w_80.t_15.bounceIn.fragment(data-auto="800")
+                %img(src="img/online.png")
+            .a_right.t_15.t_left.w_50.bounceIn.fragment(data-auto="800" data-exempt="2")
+              %h6 连接上网后
+              %h6 系统自动发现老顾客
+          .piece
+            .phone_inside.a_left
+              .w_50.t_15.bounceIn.fragment(data-auto="1800" data-clear="1" data-exempt="3")
+                %img(src="img/online_success_t.png")
+              .w_50.t_15.bounceIn.fragment(data-auto="2" data-exempt="3")
+                %img(src="img/online_success.png")
+              .w_80.t_15.bounceIn.fragment(data-auto="800" data-exempt="3")
+                %img(src="img/welcome.png")
+            .a_right.t_left.t_15.w_50.bounceIn.fragment(data-auto="800" data-clear="3")
+              %h6 即刻通知老顾客
+              %h6 送上您的一份温情
         %section.slide.fade.cube.cube_after
-          %h5 鹿由君帮您找到老顾客
-          %p 自动发现老顾客
-          %p 主动送上一份温情
-      %section.scene.up.up_after
-        %h3 优化您的营销方式
+          .sub_title
+            %h6 研究表明，获得一位新顾客的成本是保持一位老顾客的6-7倍！
+            %p ——贝恩咨询
+          .proof
+            .t_left
+              %h6 营销成本
+            .proof_img
+              %img(src="img/proof.png")
+        %span.scroll-indicator V
+      %section.scene.up.up_after.white
+        .orange_bar
+        %h3.title 优化您的营销方式
         %section.slide.fade.fix.cube_after
-          %h5 每当推出新产品，既期待，又烦恼
-          %p 要做KT板、DM单
-          %p 成本高、不及时、还特麻烦
+          .sub_title
+            %h6 推出新产品或新服务
+            %h6 您是否心中既期待又烦恼
+          .piece
+            .board
+              %img(src="img/board.png")
+            .middle
+              %h6 KT板、DM单
+              %h6 成本高，不及时
+              %h6 难以追踪宣传效果
         %section.slide.fade.cube.cube_after
-          %h5 鹿由君为您推荐新产品
-          %p 有效、方便、不操心
-          %p 还能提升形象
-  %script{src:"js/jquery-1.11.0.min.js"}
+          .sub_title 
+            %h6 优热点鹿由君帮您及时推广
+            %h6 连接上网时自动展示您的新服务
+          .demo_bottom 
+            %img(src="img/show.png")
+        %section.slide.fade.cube.cube_after
+          .sub_title 
+            %h6 追踪每一次分享与点击
+            %h6 知悉宣传效果与用户群
+          .demo_bottom 
+            %img(src="img/show.png")
+        %span.scroll-indicator V
+      %section.scene.up.up_after.white
+        %h3.title 明察秋毫 运筹帷幄
+        %section.slide.fade.fix.cube_after
+          .sub_title
+            %h6 又开了一家分店
+            %h6 难以分身了解客情？
+        %section.slide.fade.cube.cube_after
+          .data_img
+            %img(src="img/new_custom.png")
+        %section.slide.fade.cube.cube_after
+          .data_img
+            %img(src="img/rate.png")
+        %section.slide.fade.cube.cube_after
+          .data_img
+            %img(src="img/period.png")
+        .bottom_img 
+          %img(src="img/shop.png")
+        %span.scroll-indicator V
   %script{src:"js/sectionSlide.min.js"}

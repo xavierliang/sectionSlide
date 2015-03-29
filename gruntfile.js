@@ -25,6 +25,9 @@ module.exports = function(grunt) {
             files: ['js/Gruntfile.js', 'js/sectionSlide.js']
         },
         uglify: {
+            options: {
+                beautify: true
+            },
             target: {
                 files: {
                     'js/sectionSlide.min.js': [
@@ -55,7 +58,7 @@ module.exports = function(grunt) {
         },
         watch: {
             js: {
-                files: 'js/*.js',
+                files: 'js/sectionSlide.js',
                 tasks: ['jshint', 'uglify']
             },
             sass: {
