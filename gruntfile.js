@@ -26,13 +26,11 @@ module.exports = function(grunt) {
         },
         uglify: {
             options: {
-                beautify: true
+                //beautify: true
             },
             target: {
                 files: {
                     'js/sectionSlide.min.js': [
-                    //    'js/jquery-1.11.0.min.js',
-                    //    'js/jquery-migrate-1.2.1.min.js',
                         'js/touchswipe.js',
                         'js/browserSwipe.js',
                         'js/sectionSlide.js'
@@ -63,12 +61,13 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'sass/*.scss',
-                tasks: ['compass']
+                tasks: ['compass', 'autoprefixer']
             },
+            /*
             css: {
                 files: 'css/*.css',
                 tasks: ['autoprefixer']
-            },
+            },*/
             haml: {
                 files: '*.haml',
                 tasks: ['haml']
@@ -77,4 +76,5 @@ module.exports = function(grunt) {
     });
     grunt.registerTask('default', ['jshint', 'uglify', 'compass', 'autoprefixer', 'haml']);
     grunt.registerTask('dev', ['connect', 'watch']);
+    grunt.registerTask('prefixer', ['autoprefixer']);
 };

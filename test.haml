@@ -5,12 +5,16 @@
     %meta{charset:"utf-8"}/
     %meta{name:"viewport", content:"width=device-width, initial-scale=1.0, user-scalable=no"}/
     %meta{name:"Description", content:" test for sectionSlide"}/
-    %title 优热点，助力您的生意
+    %title 优热点，科技助力您的生意
     %link{rel:"stylesheet", href:"css/screen.css"}
     %script{src:"js/jquery-1.11.0.min.js"}
   %body
+    .loader
+      .spinner
+        .ball
+        %p 加载中...
     .main
-      %section.scene.fix.up_after.white
+      %section.scene.fix.up_after.white.z_top
         .logo
           %img(src="img/logo.png")
         .products
@@ -19,7 +23,16 @@
         %span.scroll-indicator V
       %section.scene.up.up_after.orange
         %h3.title 拉近您与顾客的距离
-        %section.slide.fix.fade.cube_after
+        %section.slide.fade.fix.cube_after
+          .sub_title
+            %h6.t_left 研究表明，获得一位新顾客的成本是保持一位老顾客的6-7倍！
+            %h6.t_left ——贝恩咨询
+          .proof
+            .t_left
+              %h6 营销成本
+            .proof_img
+              %img(src="img/proof.png")
+        %section.slide.cube.fade.cube_after
           .sub_title
             %h6 您已使出浑身解数关注老顾客？
           .piece.bounceIn.fragment(data-auto="800")
@@ -28,7 +41,7 @@
             .f_left.t_5
               %h6 记住老顾客的脸！
             .clear
-          .piece.bounceIn.fragment(data-auto="800")
+          .piece.bounceIn.fragment(data-auto="0")
             .f_left.icon
               %img(src="img/card.png")
             .f_left.t_5
@@ -41,33 +54,22 @@
             %img(src="img/phone.png")
           .piece
             .phone_inside.a_left
-              .w_50.t_15.bounceIn.fragment(data-auto="800")
+              .w_50.t_25.bounceIn.fragment(data-auto="800")
                 %img(src="img/online_t.png")
-              .w_80.t_15.bounceIn.fragment(data-auto="800")
+              .w_80.t_25.bounceIn.fragment(data-auto="0")
                 %img(src="img/online.png")
-            .a_right.t_15.t_left.w_50.bounceIn.fragment(data-auto="800" data-exempt="2")
+            .a_right.t_5.t_left.w_50.bounceIn.fragment(data-auto="800" data-exempt="3")
               %h6 连接上网后
               %h6 系统自动发现老顾客
           .piece
             .phone_inside.a_left
-              .w_50.t_15.bounceIn.fragment(data-auto="1800" data-clear="1" data-exempt="3")
-                %img(src="img/online_success_t.png")
-              .w_50.t_15.bounceIn.fragment(data-auto="2" data-exempt="3")
+              .w_50.t_25.bounceIn.fragment(data-auto="1800" data-clear="1" data-exempt="3")
                 %img(src="img/online_success.png")
-              .w_80.t_15.bounceIn.fragment(data-auto="800" data-exempt="3")
+              .w_80.t_25.bounceIn.fragment(data-auto="0" data-exempt="3")
                 %img(src="img/welcome.png")
-            .a_right.t_left.t_15.w_50.bounceIn.fragment(data-auto="800" data-clear="3")
+            .a_right.t_left.t_30.w_50.bounceIn.fragment(data-auto="800" data-clear="3")
               %h6 即刻通知老顾客
               %h6 送上您的一份温情
-        %section.slide.fade.cube.cube_after
-          .sub_title
-            %h6 研究表明，获得一位新顾客的成本是保持一位老顾客的6-7倍！
-            %p ——贝恩咨询
-          .proof
-            .t_left
-              %h6 营销成本
-            .proof_img
-              %img(src="img/proof.png")
         %span.scroll-indicator V
       %section.scene.up.up_after.white
         .orange_bar
@@ -84,18 +86,17 @@
               %h6 成本高，不及时
               %h6 难以追踪宣传效果
         %section.slide.fade.cube.cube_after
-          .sub_title 
+          .demo.fragment(data-auto="0") 
+            %img(src="img/show.jpg")
+          .sub_title.fragment(data-auto="0")
             %h6 优热点鹿由君帮您及时推广
             %h6 连接上网时自动展示您的新服务
-          .demo_bottom 
-            %img(src="img/show.png")
-        %section.slide.fade.cube.cube_after
-          .sub_title 
+          .sub_title.fragment(data-clear="1")
             %h6 追踪每一次分享与点击
             %h6 知悉宣传效果与用户群
-          .demo_bottom 
-            %img(src="img/show.png")
-        %span.scroll-indicator V
+          .demo.fragment(data-auto="0")
+            %img(src="img/show2.jpg")
+        %span.scroll-indicator.orange_t V
       %section.scene.up.up_after.white
         %h3.title 明察秋毫 运筹帷幄
         %section.slide.fade.fix.cube_after
@@ -103,15 +104,92 @@
             %h6 又开了一家分店
             %h6 难以分身了解客情？
         %section.slide.fade.cube.cube_after
-          .data_img
+          .computer_frame.fragment(data-auto="1" data-exempt="2")
+            %img(src="img/computer.png")
+          .data_img.bounceIn.fragment(data-auto="1")
             %img(src="img/new_custom.png")
-        %section.slide.fade.cube.cube_after
-          .data_img
+          .data_img.bounceIn.fragment(data-clear="1")
             %img(src="img/rate.png")
-        %section.slide.fade.cube.cube_after
-          .data_img
+          .data_img.bounceIn.fragment(data-clear="1")
             %img(src="img/period.png")
         .bottom_img 
-          %img(src="img/shop.png")
+          %img(src="img/shop.jpg")
         %span.scroll-indicator V
+      %section.scene.up.up_after.white
+        .w_100
+          %img(src="img/shop_bar.jpg")
+        %h3.title 上网更流畅
+        %section.slide.fade.fix.cube_after
+          .b_middle.inline_block.t_left
+            %h6.orange_t.fragment(data-auto="0") 上网人数太多，连不上网？
+            .bounceIn.fragment(data-auto="500")
+              %h6 优热点专业设备，
+              %h6 显著提升联网人数
+              %br
+            %h6.orange_t.fragment 有人看视频，网速特别慢？
+            .bounceIn.fragment(data-auto="500")
+              %h6 优热点智能限速，
+              %h6 蹭网看视频也不影响网速
+              %br
+            %h6.orange_t.fragment 出现故障，不知如何解决？
+            .bounceIn.fragment(data-auto="500")
+              %h6 出现故障智能检测
+              %h6 第一时间解决问题
+        %span.scroll-indicator.orange_t V
+      %section.scene.up.up_after.white
+        .a_bottom.orange_bar
+        %h3.title 运营维护轻松省心
+        %section.slide.fade.fix.cube_after
+          .b_middle.inline_block.t_left.bounceIn.fragment(data-auto="0")
+            %h6 隔壁老王生意提升迅猛
+            %h6 用了什么<span class="black_tech_t">黑科技</span>?
+          %div
+          .b_middle.inline_block.t_left.fragment(data-clear="1")
+            %h6 您也想试试，
+            %h6 却担心效果不理想，
+            %h6 专人运营成本过高？
+          .black_tech
+            %img(src="img/black_tech.png")
+        %section.slide.fade.cube.cube_after
+          .sub_title
+            %h6 优热点帮您打理黑科技
+          .w_80.b_middle
+            %img(src="img/service.png")
+        %section.slide.fade.cube.cube_after
+          .sub_title
+            %h6 迅速提升店面形象
+          .piece
+            %img(src="img/shoot.jpg")
+        %section.slide.fade.cube.cube_after
+          .sub_title
+            %h6 让您专心做擅长的事
+          .w_20.b_middle
+            %img(src="img/girrafe.png")
+        %span.scroll-indicator V
+      %section.scene.up.up_after.orange
+        %h3.title 选择适合您的版本
+        %section.slide
+          .b_middle.w_80
+            %img(src="img/version.png")
+        %span.scroll-indicator V
+      %section.scene.up.up_after.white.z_top
+        .w_100
+          %img(src="img/last_top.png")
+        .w_80.b_middle
+          .t_left.t_5
+            %h6 联系我们
+          .contact_wrapper
+            .f_left.ico
+              %img(src="img/phone_ico.png")
+            .f_left
+              %a(href="tel:4000287991")
+                %h6 400-028-7991
+            .clear
+          .contact_wrapper
+            .f_left.ico.mt_1
+              %img(src="img/addr_ico.png")
+            .f_left.w_80.t_left
+              %h6 成都市武侯区西部智谷D区4栋204
+        %span.scroll-indicator.orange_t.reverse V
+
   %script{src:"js/sectionSlide.min.js"}

@@ -56,7 +56,7 @@ var app = (function(app, $){
     var t = 0;
     for (var i=currentFragment+1; i<$cache.fragments.length; i++){
       var auto = $cache.fragments.eq(i).data('auto');
-      if (auto === 0 || auto===undefined) {
+      if (auto===undefined) {
         break;
       }
       t = t + auto;
@@ -72,7 +72,7 @@ var app = (function(app, $){
     switch(direction) {
       case 'up':
         if(currentFragment >= 0) {
-          currentFragment--;
+          currentFragment = -1;
           sceneHandle();
         } else {
           slideHandle(direction);
@@ -108,6 +108,15 @@ var app = (function(app, $){
             $cache.slides = $cache.scenes.eq(currentScene).find(".slide");
             $cache.fragments = $cache.slides.eq(0).find('.fragment');
             sceneHandle();
+          } else {
+            /*
+            currentScene = $cache.scenes.length - 1;
+            $cache.slides = $cache.scenes.eq(currentScene).find('.slide');
+            currentSlide = $cache.slides.length - 1;
+            $cache.fragments = $cache.slides.eq(currentSlide).find('.fragment');
+            currentFragment = $cache.fragments.length - 1;
+            sceneHandle();
+            */
           }
         }
       break;
@@ -126,6 +135,15 @@ var app = (function(app, $){
             $cache.slides = $cache.scenes.eq(currentScene).find(".slide");
             $cache.fragments = $cache.slides.eq(0).find('.fragment');
             sceneHandle();
+          } else {
+            /*
+            currentScene = 0;
+            currentSlide = 0;
+            currentFragment = -1;
+            $cache.slides = $cache.scenes.eq(currentScene).find(".slide");
+            $cache.fragments = $cache.slides.eq(0).find('.fragment');
+            sceneHandle();
+            */
           }
         }
       break;
@@ -177,6 +195,8 @@ $((function(){
 });
 */
 window.onload = function() {
+  $(".loader").hide();
+  $(".main").show();
   window.scrollTo(0,0);
   app();
 };
